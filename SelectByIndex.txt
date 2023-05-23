@@ -1,0 +1,25 @@
+WebDriver driver = new ChromeDriver();
+		   driver.manage().window().maximize();
+		   driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		   driver.get("https://www.facebook.com/signup");
+		   driver.findElement(By.xpath("(//input[@class='inputtext _58mg _5dba _2ph-'])[1]")).click();
+		   driver.findElement(By.name("firstname")).sendKeys("Akash");
+		   driver.findElement(By.xpath("(//input[@class='inputtext _58mg _5dba _2ph-'])[1]")).click();
+		   driver.findElement(By.name("lastname")).sendKeys("Jadhav");
+		   driver.findElement(By.xpath("(//input[@class='inputtext _58mg _5dba _2ph-'])[1]")).click();
+		   driver.findElement(By.name("reg_email__")).sendKeys("akashjadhav@gmail.com");
+		   driver.findElement(By.xpath("(//input[@class='inputtext _58mg _5dba _2ph-'])[1]")).click();
+		   driver.findElement(By.name("reg_email_confirmation__")).sendKeys("akashjadhav@gmail.com");
+		   driver.findElement(By.xpath("(//input[@class='inputtext _58mg _5dba _2ph-'])[1]")).click();
+	       driver.findElement(By.name("reg_passwd__")).sendKeys("Akash@123");
+	       driver.findElement(By.xpath("(//input[@class='_8esa'])[2]")).click();
+	       
+	       WebElement day = driver.findElement(By.id("day"));
+		   Select s = new Select(day);
+		   s.selectByIndex(27);
+		   WebElement month = driver.findElement(By.id("month"));
+		   Select s1 = new Select(month);
+		   s1.selectByIndex(4);
+		   WebElement year = driver.findElement(By.id("year"));
+		   Select s2 = new Select(year);
+		   s2.selectByIndex(23);
